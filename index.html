@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy Birthday Vaishu</title>
+<style>
+body{margin:0;font-family:Arial;background:linear-gradient(135deg,#ff4fa3,#7b2cff);overflow:hidden;color:#fff;display:flex;align-items:center;justify-content:center;height:100vh}
+.card{text-align:center;background:rgba(255,255,255,.12);padding:30px;border-radius:20px;backdrop-filter:blur(8px)}
+h1{font-size:3em} .heart{position:fixed;color:#ffb6d9;animation:fall 8s linear infinite}
+button{padding:12px 20px;border:none;border-radius:30px;font-size:18px}
+@keyframes fall{from{transform:translateY(-10vh)}to{transform:translateY(110vh)}}
+</style></head>
+<body>
+<div class="card">
+<h1>🎂 Happy Birthday Vaishu 💖</h1>
+<h2>Happy Birthday Princess! 👑</h2>
+<p>Love You Lots ❤️</p>
+<button onclick="document.getElementById('m').play()">▶ Play Music</button>
+<audio id="m" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+</div>
+<script>
+for(let i=0;i<40;i++){let h=document.createElement('div');h.className='heart';h.innerHTML='💖';h.style.left=Math.random()*100+'vw';h.style.animationDelay=Math.random()*8+'s';h.style.fontSize=(20+Math.random()*20)+'px';document.body.appendChild(h);}
+</script>
+</body></html>
