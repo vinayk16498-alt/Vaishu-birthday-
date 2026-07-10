@@ -1,22 +1,25 @@
 <!DOCTYPE html>
-<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
 <title>Happy Birthday Vaishu</title>
 <style>
-body{margin:0;font-family:Arial;background:linear-gradient(135deg,#ff4fa3,#7b2cff);overflow:hidden;color:#fff;display:flex;align-items:center;justify-content:center;height:100vh}
-.card{text-align:center;background:rgba(255,255,255,.12);padding:30px;border-radius:20px;backdrop-filter:blur(8px)}
-h1{font-size:3em} .heart{position:fixed;color:#ffb6d9;animation:fall 8s linear infinite}
-button{padding:12px 20px;border:none;border-radius:30px;font-size:18px}
-@keyframes fall{from{transform:translateY(-10vh)}to{transform:translateY(110vh)}}
-</style></head>
-<body>
-<div class="card">
-<h1>🎂 Happy Birthday Vaishu 💖</h1>
-<h2>Happy Birthday Princess! 👑</h2>
-<p>Love You Lots ❤️</p>
-<button onclick="document.getElementById('m').play()">▶ Play Music</button>
-<audio id="m" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+html,body{margin:0;height:100%;overflow:hidden;font-family:Arial,sans-serif}
+body{display:flex;justify-content:center;align-items:center;background:linear-gradient(135deg,#ff5fa2,#8a4dff);color:#fff}
+.card{background:rgba(255,255,255,.12);padding:30px;border-radius:20px;text-align:center;box-shadow:0 0 25px rgba(0,0,0,.25)}
+h1{font-size:3rem;margin:0}.sub{font-size:1.5rem}
+.heart,.balloon{position:fixed;bottom:-60px;animation:rise linear infinite}
+@keyframes rise{from{transform:translateY(0)}to{transform:translateY(-120vh)}}
+.confetti{position:fixed;top:-20px;animation:fall linear infinite}
+@keyframes fall{to{transform:translateY(120vh) rotate(720deg)}}
+</style></head><body>
+<div class='card'>
+<h1>🎂 Happy Birthday</h1>
+<h2>Vaishu 💖</h2>
+<p class='sub'>Happy Birthday Princess 👑</p>
+<h2>Love You Lots ❤️</h2>
+<p>May your day be filled with happiness, smiles and beautiful memories. ✨</p>
 </div>
 <script>
-for(let i=0;i<40;i++){let h=document.createElement('div');h.className='heart';h.innerHTML='💖';h.style.left=Math.random()*100+'vw';h.style.animationDelay=Math.random()*8+'s';h.style.fontSize=(20+Math.random()*20)+'px';document.body.appendChild(h);}
-</script>
-</body></html>
+for(let i=0;i<25;i++){let e=document.createElement('div');e.className='heart';e.innerHTML='💖';e.style.left=Math.random()*100+'vw';e.style.animationDuration=(6+Math.random()*5)+'s';e.style.fontSize=(18+Math.random()*20)+'px';document.body.appendChild(e);}
+for(let i=0;i<20;i++){let e=document.createElement('div');e.className='balloon';e.innerHTML='🎈';e.style.left=Math.random()*100+'vw';e.style.animationDuration=(7+Math.random()*6)+'s';e.style.fontSize='32px';document.body.appendChild(e);}
+for(let i=0;i<80;i++){let e=document.createElement('div');e.className='confetti';e.innerHTML='🎊';e.style.left=Math.random()*100+'vw';e.style.animationDuration=(3+Math.random()*4)+'s';document.body.appendChild(e);}
+</script></body></html>
